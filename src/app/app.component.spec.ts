@@ -21,21 +21,21 @@ describe(`(1) TEST del componente "AppComponent"`, () => {
 
   });
 
-  //TODO:Aislado! 
+  //TODO:Aislado!
   it('Debe de existir el AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance
     expect(app).toBeTruthy(); //TODO: ✔
   });
 
-  //TODO:Aislado! 
+  //TODO:Aislado!
   it('Debe retornar formulario invalido', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance
     fixture.detectChanges() //TODO: <---------------
 
     const email = app.form.controls['email']
-    email.setValue('leifer33@gmail.com')
+    email.setValue('tomas@gmail.com')
 
     expect(app.form.invalid).toBeTrue(); //TODO: ✔
   });
@@ -48,13 +48,13 @@ describe(`(1) TEST del componente "AppComponent"`, () => {
     let email = app.form.controls['email']
     let password = app.form.controls['password']
 
-    email.setValue('leifer33@gmail.com')
+    email.setValue('tomas@gmail.com')
     password.setValue('123456')
 
     expect(app.form.invalid).toBeFalse(); //TODO: ✔
   });
 
-  //TODO:Aislado!
+  // //TODO:Aislado!
   it(`Debe de actulizar datos de usuario`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -63,7 +63,7 @@ describe(`(1) TEST del componente "AppComponent"`, () => {
     let email = app.form.controls['email']
     let password = app.form.controls['password']
 
-    email.setValue('leifer33@gmail.com')
+    email.setValue('tomas@gmail.com')
     password.setValue('123456')
 
     const btnElement = fixture.debugElement.query(By.css('button.btn'))
